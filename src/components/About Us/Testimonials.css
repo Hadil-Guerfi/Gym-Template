@@ -1,0 +1,337 @@
+
+.testimonials-heading {
+    margin-bottom: 65px;
+}
+.testimonials-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    padding: 0 var(--main-padding-left);
+}
+
+.testimonials-left-side{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    flex: 1.4 ;
+    padding: 25px;
+}
+
+
+
+.heading-right{
+    font-size: 45px;
+    color: var(--orange);
+    padding-bottom:30px;
+}
+
+.heading-right+div{
+    position: relative;
+    font-size: 20px;
+    padding-bottom: 30px;
+    line-height: 48px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.status{
+    font-size: 17px;
+}
+
+.status :first-child{
+    color: var(--orange);
+}
+
+.status :last-child{
+    color: white;
+}
+
+.testimonials-right-side{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 ;
+    position: relative;
+
+}
+
+.img-left-container{
+    width: fit-content;
+    position: relative;
+    height: fit-content;
+}
+
+.cadre{
+    width: 280px;
+    height: 310px;
+    /* background-color: red; */
+    position: absolute;
+    top:-15px;
+    left: -15px;
+    z-index: -1;
+    border: 2px solid var(--orange);
+    position: relative;
+}
+
+.full{
+    width: 280px;
+    height: 310px;
+    background: var(--planCard);
+    position: absolute;
+    bottom:0px;
+    top:15px;
+    right: -15px;
+    z-index: -1;
+
+}
+
+.img-left-container>img{
+    width: 280px;
+    height: 310px;
+    margin-bottom: 60px;
+    position: absolute;
+    top:0;
+    right:0;
+    
+
+}
+
+
+.arrows :first-child{
+    position: absolute;
+    bottom:-55px;
+    left: 0;
+}
+
+.arrows :last-child{
+    position: absolute;
+    bottom:-55px;
+    right: 0;
+}
+
+.arrows>img{
+    width: 32px;
+    height: 25px;
+}
+
+
+
+@media (max-width:1200px)  {
+    
+    .translateToLeft{
+        animation: toLeftLargeScreen  0.5s !important;
+    }
+}
+
+
+@keyframes toLeftLargeScreen {
+
+    0%{
+        opacity: 0;
+        right: -50px;
+    }
+
+    100%{
+        opacity: 1;
+        right: 0px;
+    }
+}
+
+@media (max-width:992px) {
+
+    
+    .testimonials-container{
+        display: flex;
+        flex-direction: column-reverse;}
+
+    .testimonials-left-side{
+        text-align: center;
+        padding: 0;
+    }
+    
+   
+
+    .heading-right {
+
+        padding-top: 50px;
+    }
+
+    .heading-right+div{
+        margin-bottom: 0px;
+    }
+ 
+}
+        
+
+
+@media (max-width:768px) {
+    .heading-right{
+        font-size: 32px;
+    }
+    
+    .heading-right+div{
+        margin-bottom: 0px;
+        padding-bottom: 18px;
+        font-size: 18px;
+    }
+
+
+    .img-left-container>img{
+        width: 250px;
+        height: 230px;
+    }
+
+    .status :last-child {
+        display: inline-block;
+        margin-top: 10px;
+    }
+
+    .full,.cadre{
+        width: 250px;
+        height: 230px;
+    }
+
+    .translateToLeft{
+        animation: toLeftSmallScreen  0.5s !important;
+    }
+
+    .animateFull{
+        animation: animToLeftSmall  0.8s !important;
+    }
+
+    .animateCadre{
+        animation: animToRightSmall  0.8s !important;
+    }
+
+
+}
+
+
+    .translateToRight{
+        animation: toRight  0.5s ;
+    }
+
+    @keyframes toRight {
+
+        0%{
+            opacity: 0;
+            left: -50px;
+        }
+
+        100%{
+            opacity: 1;
+            left:0px;
+        }
+        
+    }
+
+
+    .translateToLeft{
+        animation: toLeft  0.5s ;
+    }
+
+    @keyframes toLeft {
+
+        0%{
+            opacity: 0;
+            right: -100px;
+        }
+
+        100%{
+            opacity: 1;
+            right: 0px;
+        }
+        
+    }
+
+    @keyframes toLeftSmallScreen {
+
+        0%{
+            opacity: 0;
+            right: -40px;
+        }
+
+        100%{
+            opacity: 1;
+            right: 0px;
+        }
+    }
+
+
+
+
+    .disp{
+        animation: disp  0.5s ;
+    }
+
+    
+    @keyframes disp {
+
+        0%{
+            opacity: 0;
+        }
+
+        100%{
+            opacity: 1;
+        }
+        
+    }
+
+    .animateCadre{
+        animation: animToRight  0.8s ;
+    }
+
+    @keyframes animToRight {
+
+        from{
+            left: -60px;
+        }
+
+        to{
+            left:-15px;
+        }
+        
+    }
+
+    
+    .animateFull{
+        animation: animToLeft  0.8s ;
+    }
+
+    @keyframes animToLeft {
+
+        from{
+            right: -60px;
+        }
+
+        to{
+            right:-15px;
+        }
+        
+    }
+
+    @keyframes animToLeftSmall {
+
+        from{
+            right: -40px;
+        }
+
+        to{
+            right:-15px;
+        }
+        
+    }
+
+    @keyframes animToRightSmall {
+        
+        from{
+            left: -40px;
+        }
+
+        to{
+            left:-15px;
+        }
+
+    }

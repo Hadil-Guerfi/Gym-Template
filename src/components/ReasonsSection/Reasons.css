@@ -1,0 +1,177 @@
+
+.reasons-sides{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:50px;
+    padding-left: var(--main-padding-left);
+    padding-right: 50px;
+
+}
+
+.reasons-text{
+    flex: 1;
+    min-width: 430px;
+    line-height: 35px;
+}
+
+.reasons-imgs {
+    flex: 1;
+    max-width: 900px;
+    display: grid;
+    grid-template-columns:250px repeat(2,minmax(200px,1fr))  ;
+    grid-template-rows: 280px 200px;
+    gap: 20px;
+}
+
+.reasons-imgs img:first-child{
+    grid-area: 1/1/3/1;
+    width: 100%;
+    height: 100%;
+
+}
+
+.reasons-imgs img:nth-child(2){
+    grid-area: 1/2/2/4;
+    height: fit-content;
+    height: 100%;
+    width: 100%;
+}
+
+
+.reasons-imgs img:nth-child(3) {
+    grid-area: 2/2/3/3;
+    width: 100%;
+    height: 100%;
+}
+
+.reasons-imgs img:last-child{
+    grid-area: 2/3/3/3;
+    width: 100%;
+    height: 100%;
+}
+
+.heading-section span{
+    padding-right: 30px;
+
+}
+
+.ticks div{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.ticks div img{
+    width: 50px;
+    height: 50px;
+    margin-bottom: -8px;
+}
+
+.ticks div span{
+    padding-left: 5px;
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+}
+
+
+.partners-side{
+    color: var(--orange);
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin:35px 0 0 0;
+}
+
+.partners-side div{
+    margin-bottom: 25px;
+
+}
+
+.partners-side .partners-imgs{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+.partners-side .partners-imgs img{
+    width: 70px;
+    height: 50px;
+}
+
+
+@media (max-width:1280px) {
+   
+.reasons-sides{
+    justify-content: center;
+}
+
+.reasons-text{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    gap: 10px;
+    
+}
+
+
+}
+
+
+@media (max-width:768px) {
+    
+    .partners-side{
+        font-size:30px;
+       
+    }
+
+    .ticks div span{
+        position: relative;
+        font-size: 14px;
+        font-weight: 100;
+        left: 10px;
+        width: 100px;
+     
+    }
+
+    .ticks{
+        height: fit-content;
+    }
+
+    .reasons-sides{
+        justify-content: center;
+    }
+    
+    .reasons-text{
+        align-content: flex-start;
+        line-height: 30px;
+        
+    }
+    
+    .reasons-imgs {
+        max-width: none;
+        display: grid;
+        grid-template-columns:repeat(auto-fill,minmax(180px,250px))  ;
+        grid-template-rows:none;
+        gap: 25px;
+        justify-content: center;
+    }
+    .reasons-imgs img{
+        height: 200px !important;
+    }
+
+    .reasons-imgs img{
+        grid-area:unset !important;
+
+    }
+
+    .ticks div img{
+        width:35px;
+        height: 35px;
+        margin-bottom: -6px;
+    }
+
+    .reasons-text{
+        min-width:unset;
+    }
+
+}

@@ -1,0 +1,88 @@
+
+.program-card{
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    height: 260px;
+    padding: 30px;
+    background-color: gray;
+    transition: 3s;
+
+
+}
+
+
+
+.program-card:hover{
+    background: var(--planCard);
+}
+
+.program-card svg{
+    fill: white;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 15px;
+}
+
+.prgm-heading {
+
+    font-size: 18px;
+    font-weight:bold;
+    color: white;
+    margin-bottom: 15px;
+
+}
+
+.program-card span{
+    font-size: 15px;
+    color: white;
+    line-height: 25px;
+}
+
+.program-card .join-now{
+    margin-top: 20px;
+    position: relative;
+}
+
+.program-card .join-now a{
+    font-size: 17px;
+    color: white;
+}
+
+.program-card .join-now img{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.program-card .join-now div{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:100px;
+    width: 50px;
+    height: 50px;
+}
+
+.program-card .join-now div:hover img{
+    animation: up-down 0.6s infinite forwards;
+}
+
+@keyframes up-down  {
+
+    0%{
+
+        left:15px;
+    }
+
+    100%{
+        left:0px;
+    }
+
+    
+}
+
+

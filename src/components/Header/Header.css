@@ -1,0 +1,234 @@
+
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    min-height: 74px;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+.logo img{
+
+    width:160px;
+    height: 48px;
+    /* pour plus espacer le nav bar */
+    margin-right: 100px;
+
+}
+
+nav{
+    display: block;
+}
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    gap:35px;
+}
+
+nav ul li{
+    cursor: pointer;
+}
+
+
+nav ul li a{
+    color: white;
+}
+
+nav ul li a:hover{
+    color: var(--orange);
+}
+
+@media (max-width: 768px) {
+
+    .header{
+        position: relative;
+        flex-direction: column;
+        align-items: flex-end;
+        margin: 0;
+    }
+
+    nav{
+        position: relative;
+        width: 100%;
+    }
+
+    
+    nav ul{
+    position: absolute;
+    flex-direction: column;
+    right: 0;
+    padding:10px 0;
+    background-color: var(--orange);
+    width: 100%;
+    z-index: 2;
+   }
+
+    .logo{
+        display: none;
+    }  
+}
+
+.burger-menu{
+    display:flex ;
+    flex-direction: column;
+    width: fit-content;
+    padding: 40px 15px 0 0;
+    position: relative;
+}
+.burger-menu div{
+    position: relative;
+    width: 50px;
+    height: 5.5px;
+    background-color: var(--orange);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: 0.5s;
+}  
+
+.burger-menu .clicked:first-child{
+    transform-origin: top left;
+    transform: rotate(40deg);
+}
+
+.burger-menu .clicked:nth-child(2){
+    margin-left: auto;
+    margin-right: auto;
+    animation: dispalyed-intermidiaite-burger1 0.6s forwards;
+}
+
+.burger-menu .clicked:last-child{
+    animation: dispalyed-last-burger 0.6s forwards;
+    transform-origin: bottom left;
+    transform: rotate(140deg) translate(-100%,100%);
+}
+
+@keyframes dispalyed-intermidiaite-burger1 {
+    0%{
+        width: 100%;
+        opacity: 1;
+    }
+
+    100%{
+        width: 0%;
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+}
+
+div.unclicked:first-child,div.unclicked:last-child{
+    animation: jump 0.3s ;
+    animation-delay: 0.3s;
+    transform-origin: left;
+}
+
+@keyframes jump {
+
+    0%{
+        transform: rotate(-8deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+div.unclicked:nth-child(2){
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: dispalyed-intermidiaite-burger2;
+    animation-duration: 0.5s;
+}
+
+    @keyframes dispalyed-intermidiaite-burger2 {
+    0%{
+        width:0%;
+        opacity:0;
+        visibility: hidden;
+    }
+
+    85%{ 
+        position: relative;
+        opacity: 8;
+        transform: scale(1.1,1);
+    }
+
+    100%{
+        padding: 0px;
+        width: 100%;
+        opacity: 1;
+        transform: scale(1);
+    }    
+}
+
+
+/* div.from-large-unclicked{
+    animation: none;
+} */
+
+
+div.from-large-unclicked:nth-child(2),div.from-large-unclicked:first-child,div.from-large-unclicked:last-child{
+    animation: none;
+} 
+
+
+
+
+/* known only inside the msall screen si on large screen doesn't  work */
+@media (max-width: 768px) {
+    .burger-menu{
+        z-index:3;
+    }
+    .opened{
+        display: block;
+        animation: transalte-nav-opened 0.7s forwards ;
+        z-index: 2;
+    }
+
+    @keyframes transalte-nav-opened{
+
+        0%{
+         opacity: 0;
+         right:100%;
+         
+        }
+
+        100%{
+            opacity: 1;
+            right: 0;
+        }
+    }
+
+
+    .closed{
+        animation: transalte-nav-closed 0.7s forwards ;
+        z-index: 2;
+    } 
+
+
+    @keyframes transalte-nav-closed{
+
+        0%{
+         display: block;
+         opacity: 1;
+         right: 0;
+        }
+
+        100%{
+            opacity: 0;
+            right:100%;
+        }
+    }
+
+    .Hidden{
+        display: none;
+    }
+
+ 
+}
+

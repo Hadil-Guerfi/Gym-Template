@@ -1,0 +1,132 @@
+.plans{
+    position:relative;
+}
+.plans-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,290px));
+    gap: 70px;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.plan-card{
+    background:var(--caloryCard);
+    height: 480px;
+    padding: 22px ;
+    transition: 0.3s;
+}
+
+.plan-card-selected{
+    background:var( --planCard);
+    transform: scale(1.1,1.1);
+}
+
+.plan-card svg {
+    fill:white;
+    width: 40px;
+    height: 45px;
+}
+
+.plan-card{
+    color: white;
+}
+
+.plan-card .name{
+    padding-top: 20px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.plan-card .price{
+    font-size: 50px;
+    font-weight: 700;
+    padding: 20px 0;
+}
+
+.features{
+    position: relative;
+}
+
+.features img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top:2px;
+}
+
+.features div{
+    padding-bottom: 20px;
+}
+
+.features div span{
+    font-size: 16px;
+    padding-left: 6px;
+}
+
+.plan-card .benefits{
+    padding-top: 18px;
+}
+
+.plan-card .benefits img{
+    position: relative;
+    top: 4px;
+    left: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+.plan-card .join{
+    position: relative;
+    margin-top: 30px;
+    display: flex;
+    width: 100px;
+    justify-content: center;
+
+}
+
+.plan-card .join button{
+    width: 120px;
+    height: 40px;
+    text-align: center;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    left: 65%;
+}
+
+
+
+.plans-blur1{
+    width:500px;
+    height: 350px;
+    top:130px;
+    left:0;
+}
+
+.plans-blur2{
+    width:400px;
+    height: 350px;
+    top:230px;
+    right:5%;
+}
+
+@media (max-width:992px) {
+    .plans-blur2{
+        top: 15%;
+    }
+
+    .plans-blur1{
+        left: 50%;
+        transform: translateX(-50%);
+        top: 60%;
+        width:250px;
+        height: 500px;
+
+    }
+    
+}
+
+@media (max-width:768px) {
+    
+}
